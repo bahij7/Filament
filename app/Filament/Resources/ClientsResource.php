@@ -24,24 +24,24 @@ class ClientsResource extends Resource
     {
         return $form
             ->schema([
-                Forms\Components\TextInput::make('name')
-                    ->required()
-                    ->maxLength(255),
-                Forms\Components\TextInput::make('email')
-                    ->email()
-                    ->required()
-                    ->maxLength(255),
-                Forms\Components\TextInput::make('phone')
-                    ->tel()
-                    ->required()
-                    ->maxLength(255),
-                Forms\Components\Textarea::make('address')
-                    ->required()
-                    ->maxLength(65535)
-                    ->columnSpanFull(),
-                Forms\Components\TextInput::make('city')
-                    ->required()
-                    ->maxLength(255),
+                // Forms\Components\TextInput::make('name')
+                //     ->required()
+                //     ->maxLength(255),
+                // Forms\Components\TextInput::make('email')
+                //     ->email()
+                //     ->required()
+                //     ->maxLength(255),
+                // Forms\Components\TextInput::make('phone')
+                //     ->tel()
+                //     ->required()
+                //     ->maxLength(255),
+                // Forms\Components\Textarea::make('address')
+                //     ->required()
+                //     ->maxLength(65535)
+                //     ->columnSpanFull(),
+                // Forms\Components\TextInput::make('city')
+                //     ->required()
+                //     ->maxLength(255),
             ]);
     }
 

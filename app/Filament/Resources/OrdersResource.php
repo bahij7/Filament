@@ -24,26 +24,26 @@ class OrdersResource extends Resource
     {
         return $form
             ->schema([
-                Forms\Components\TextInput::make('client_id')
-                    ->required()
-                    ->numeric(),
-                Forms\Components\TextInput::make('product_id')
-                    ->required()
-                    ->numeric(),
-                Forms\Components\TextInput::make('client_name')
-                    ->required()
-                    ->maxLength(255),
-                Forms\Components\TextInput::make('client_phone')
-                    ->tel()
-                    ->required()
-                    ->maxLength(255),
-                Forms\Components\TextInput::make('product_price')
-                    ->required()
-                    ->numeric(),
-                Forms\Components\TextInput::make('status')
-                    ->required()
-                    ->maxLength(255)
-                    ->default('pending'),
+                // Forms\Components\TextInput::make('client_id')
+                //     ->required()
+                //     ->numeric(),
+                // Forms\Components\TextInput::make('product_id')
+                //     ->required()
+                //     ->numeric(),
+                // Forms\Components\TextInput::make('client_name')
+                //     ->required()
+                //     ->maxLength(255),
+                // Forms\Components\TextInput::make('client_phone')
+                //     ->tel()
+                //     ->required()
+                //     ->maxLength(255),
+                // Forms\Components\TextInput::make('product_price')
+                //     ->required()
+                //     ->numeric(),
+                // Forms\Components\TextInput::make('status')
+                //     ->required()
+                //     ->maxLength(255)
+                //     ->default('pending'),
             ]);
     }
 
@@ -79,12 +79,12 @@ class OrdersResource extends Resource
                 //
             ])
             ->actions([
-                Tables\Actions\EditAction::make(),
+                // Tables\Actions\EditAction::make(),
             ])
             ->bulkActions([
-                Tables\Actions\BulkActionGroup::make([
-                    Tables\Actions\DeleteBulkAction::make(),
-                ]),
+                // Tables\Actions\BulkActionGroup::make([
+                //     Tables\Actions\DeleteBulkAction::make(),
+                // ]),
             ]);
     }
 
@@ -99,8 +99,8 @@ class OrdersResource extends Resource
     {
         return [
             'index' => Pages\ListOrders::route('/'),
-            'create' => Pages\CreateOrders::route('/create'),
-            'edit' => Pages\EditOrders::route('/{record}/edit'),
+            // 'create' => Pages\CreateOrders::route('/create'),
+            // 'edit' => Pages\EditOrders::route('/{record}/edit'),
         ];
     }
 }
