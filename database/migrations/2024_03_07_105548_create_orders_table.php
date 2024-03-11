@@ -17,12 +17,8 @@ return new class extends Migration
             $table->unsignedBigInteger('client_id');
             $table->foreign('client_id')->references('id')->on('clients');
 
-            $table->string('client_name');
-            $table->string('client_phone');
-
             $table->unsignedBigInteger('product_id');
             $table->foreign('product_id')->references('id')->on('products');
-            $table->string('product_name');
 
             $table->decimal('product_price', 8, 2);
 

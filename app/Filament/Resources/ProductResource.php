@@ -17,7 +17,7 @@ class ProductResource extends Resource
 {
     protected static ?string $model = Product::class;
 
-    protected static ?string $navigationGroup = 'Store';
+    protected static ?string $navigationGroup = 'Shop';
     protected static ?string $navigationIcon = 'heroicon-o-server-stack';
 
     public static function form(Form $form): Form
@@ -31,7 +31,7 @@ class ProductResource extends Resource
                     ->required()
                     ->numeric()
                     ->prefix('$'),
-                Forms\Components\Textarea::make('description')
+                Forms\Components\MarkdownEditor::make('description')
                     ->maxLength(65535)
                     ->columnSpanFull(),
                 Forms\Components\Toggle::make('isAvailable')
@@ -43,10 +43,12 @@ class ProductResource extends Resource
     {
         return $table
             ->columns([
+                Tables\Columns\TextColumn::make('id'),
                 Tables\Columns\TextColumn::make('name')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('price')
                     ->money()
+
                     ->sortable(),
                 Tables\Columns\IconColumn::make('isAvailable')
                     ->boolean(),

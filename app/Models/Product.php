@@ -9,8 +9,8 @@ class Product extends Model
 {
     protected $fillable = ["name", "price", "description", "isAvailable"];
 
-    public function orders()
+    public function orders() : hasMany
     {
-        return $this->hasMany(Order::class, 'product_id');
+        return $this->hasMany(Orders::class, 'product_id');
     }
 }
